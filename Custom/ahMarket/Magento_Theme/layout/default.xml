@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    <referenceBlock name="authorization-link" remove="true" />
+    <referenceBlock name="advanced-search-link" remove="true" />
+    <referenceBlock name="header.container" remove="true" />   
+      <referenceContainer name="page.wrapper">
+          <block class="Magento\Framework\View\Element\Template" 
+            name="Custom_header" 
+            template="Magento_Theme::html/customheader.phtml" 
+            before="main.content"/>
+      </referenceContainer> 
+          <move element="navigation.sections" destination="Custom_header"/>      
+          <move element="top.search" destination="Custom_header"/>
+          <move element="minicart" destination="Custom_header"/>
+          <move element="logo" destination="Custom_header"/>   
+          <move element="breadcrumbs" destination="Custom_header"/>    
+          <referenceBlock name="footer_links" remove="true" />
+          <referenceBlock name="form.subscribe" remove="true" />
+          <referenceContainer name="page.wrapper">
+              <block class="Magento\Framework\View\Element\Template" 
+              name="Custom_footer" 
+              template="Magento_Theme::html/customfooter.phtml" 
+              after="main.content"/> 
+            </referenceContainer> 
+            <move element="report.bugs" destination="Custom_footer"/>     
+    </body>
+</page>

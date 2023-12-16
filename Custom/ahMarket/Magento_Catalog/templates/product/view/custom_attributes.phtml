@@ -1,0 +1,25 @@
+<?php $_product = $block->getProduct() ?>
+<?php $shipping = $_product->getAttributeText('shipping'); ?>
+<?php $product_date = $_product->getAttributeText('product_date'); ?>
+<?php $delivery_date = $_product->getAttributeText('delivery_date'); ?>
+
+<?php if ($shipping): ?>
+    <div class="product attribute shipping">
+        <strong class="type"><?php echo __('Shipping'); ?>:</strong>
+        <div class="value"><?php echo $shipping; ?></div>
+    </div>
+<?php endif; ?>
+
+<?php if ($product_date): ?>
+    <div class="product attribute details">
+        <strong class="type"><?php echo __('Product Details'); ?>:</strong>
+        <div class="value"><?php echo $product_date; ?></div>
+    </div>
+<?php endif; ?>
+
+<?php if ($delivery_date): ?>
+    <div class="product attribute delivery_date">
+        <strong class="type"><?php echo __('Delivery Date'); ?>:</strong>
+        <div class="value"><?php echo $delivery_date; ?></div>
+    </div>
+<?php endif; ?>

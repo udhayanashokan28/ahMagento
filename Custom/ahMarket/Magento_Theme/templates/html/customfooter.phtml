@@ -1,0 +1,8 @@
+<footer>
+    <div id="custom-footer-id" class="container-fluid header-container">
+            <div class="col-md-4 col-sm-12 col-xs-12 custom-newsletter">
+            <?php echo $this->getLayout()->createBlock("Magento\Newsletter\Block\Subscribe")->setTemplate("subscribe.phtml")->toHtml(); ?>    
+            </div>
+        </div>
+    </div>
+</footer>
