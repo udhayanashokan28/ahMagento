@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <!--Custom attributes pu it one phtml file-->
+        <!--Custom attributes put it one phtml file after product info-->
         <referenceContainer name="content">
-            <block class="Magento\Catalog\Block\Product\View" name="product.info.color" template="Magento_Catalog::product/view/custom_attributes.phtml" />
+            <block class="Magento\Catalog\Block\Product\View" name="custom.product.attributes" template="Magento_Catalog::product/view/custom_attributes.phtml" />
         </referenceContainer>
         <!--Put color and size after the product name-->
          <move element="product.info.options.wrapper" destination="page.main.title" after="-" />
+         <move element="custom.product.attributes" destination="product.info.main" after="-" />
+
     </body>
 </page>
