@@ -48,7 +48,7 @@ class Addcustomdatapatch implements DataPatchInterface
 		   'apply_to' => \Magento\ConfigurableProduct\Model\Product\Type\Configurable::TYPE_CODE
         ]);
         $eavSetup->addAttribute(\Magento\Catalog\Model\Product::ENTITY, 'delivery_date', [
-            'type' => 'date',
+            'type' => 'datetime',
             'backend' => '',
             'frontend' => '',
             'label' => 'Delivery Date',
