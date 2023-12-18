@@ -1,17 +1,1 @@
-<?php $_product = $block->getProduct() ?>
-<?php $shipping = $_product->getAttributeText('shipping'); ?>
-<?php $product_date = $_product->getAttributeText('product_date'); ?>
 
-<?php if ($shipping): ?>
-    <div class="product attribute color">
-        <strong class="type"><?php echo __('Color'); ?>:</strong>
-        <div class="value"><?php echo $color; ?></div>
-    </div>
-<?php endif; ?>
-
-<?php if ($product_date): ?>
-    <div class="product attribute size">
-        <strong class="type"><?php echo __('Size'); ?>:</strong>
-        <div class="value"><?php echo $size; ?></div>
-    </div>
-<?php endif; ?>
